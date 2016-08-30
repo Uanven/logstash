@@ -43,6 +43,8 @@ class LogStash::Logger
   def error?(*args); @channel.error?(*args); end
   def fatal(*args); @channel.fatal(*args); end
   def fatal?(*args); @channel.fatal?(*args); end
+  def trace(*args); @channel.trace(*args); end
+  def trace?(*args); @channel.trace?(*args); end
 
   def self.setup_log4j(logger)
     require "java"
